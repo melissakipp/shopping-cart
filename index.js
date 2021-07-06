@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
 const authRouter = require('./routes/admin/auth');
+const productsRouter = require('./routes/admin/products');
 
 const app = express();
 const HOST = '0.0.0.0';
@@ -13,6 +14,7 @@ app.use(cookieSession({
   keys: ['sd2f1s35d4f5ee64s3g1']
 }));
 app.use(authRouter);
+app.use(productsRouter);
 
 
 app.listen(PORT, HOST, () => {
