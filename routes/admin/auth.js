@@ -4,6 +4,8 @@ const { check, validationResult } = require('express-validator');
 const usersRepo = require('../../repositories/users');
 const signupTemplate = require('../../views/admin/signup');
 const signinTemplate = require('../../views/admin/signin');
+const home = require('../../views/home');
+
 const {
   requireEmail,
   requirePassword,
@@ -14,10 +16,7 @@ const {
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.send(`
-    <a href="/signup">Sign up</a><br />
-    <a href="#">Sign in</a>
-  `);
+  res.send(home());
 });
 
 router.get('/signup', (req, res) => {

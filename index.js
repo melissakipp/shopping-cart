@@ -7,6 +7,7 @@ const app = express();
 const HOST = '0.0.0.0';
 const PORT = 3000;
 
+app.use(express.static('public/assets'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieSession({
   keys: ['sd2f1s35d4f5ee64s3g1']
