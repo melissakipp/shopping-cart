@@ -1,7 +1,7 @@
 const express = require('express');
 const usersRepo = require('../../repositories/users');
 
-const router = express.Route();
+const router = express.Router();
 
 router.get('/', (req, res) => {
   res.send(`
