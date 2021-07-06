@@ -1,0 +1,25 @@
+[
+  {
+    "email": "test@test.com"
+  },
+  {
+    "email": "jane@thing.com",
+    "password": "jonathan",
+    "id": "48ef40b2"
+  },
+  {
+    "email": "jonDoe@somewhere.com",
+    "password": "melissa",
+    "id": "2f4bf745"
+  },
+  {
+    "email": "elisabeth@bossbaby.com",
+    "password": "ba08aca89e2b944799c41012782b1fcab63aa67c1764176aaf09d53408c0dea6a6011311cdcee55f3c587df8b5532ec443357cdf01be390a2afffa67a58de8e2.e07d319481854d55",
+    "id": "c56d7250"
+  },
+  {
+    "email": "lissa@rainbow.com",
+    "password": "a3f38ad5c9af8c4358bac6df06b5fac15bb8cabe722fa4023b021f0849fcd4797098d62158e50aa1820bfaba71a3f8e7b646caa479fa608acb8d1d355182e07e.92f316950f94a702",
+    "id": "14692542"
+  }
+]

@@ -1,0 +1,11 @@
+version: "2.7"
+
+services:
+  nodejs:
+    image: nodejs
+    build: .
+    user: node
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app

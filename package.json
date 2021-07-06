@@ -1,0 +1,42 @@
+{
+  "name": "secret-message-app",
+  "version": "1.0.0",
+  "description": "Starter pack for compiling ES6+ apps to ES5",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:express": "node index.js",
+    "dev": "nodemon -L index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      ".git",
+      ".dockerignore",
+      ".docker-compose.yml",
+      "Dockerfile",
+      "node_modules/**/node_modules"
+    ],
+    "verbose": true,
+    "execMap": {
+      "js": "node --harmony"
+    },
+    "legacyWatch": true,
+    "ext": "ejs, js, css"
+  },
+  "keywords": [
+    "docker",
+    "express",
+    "nodemon"
+  ],
+  "author": "Melissa Kipp",
+  "license": "MIT",
+  "dependencies": {
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
