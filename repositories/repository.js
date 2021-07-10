@@ -6,6 +6,7 @@ module.exports = class Repository {
     if (!filename) {
       throw new Error('Creating a repository requires a filename');
     }
+
     this.filename = filename;
     try {
       fs.accessSync(this.filename);
@@ -16,9 +17,11 @@ module.exports = class Repository {
 
   async create(attrs) {
     attrs.id = this.randomId();
+
     const records = await this.getAll();
-    records.push(attr);
+    records.push(attrs);
     await this.writeAll(records);
+
     return attrs;
   }
 
@@ -31,7 +34,10 @@ module.exports = class Repository {
   }
 
   async writeAll(records) {
-    await fs.promises.writeFile(this.filename, JSON.stringify(records, null, 2));
+    await fs.promises.writeFile(
+      this.filename,
+      JSON.stringify(records, null, 2)
+    );
   }
 
   randomId() {
@@ -52,6 +58,7 @@ module.exports = class Repository {
   async update(id, attrs) {
     const records = await this.getAll();
     const record = records.find(record => record.id === id);
+
     if (!record) {
       throw new Error(`Record with id ${id} not found`);
     }
@@ -62,16 +69,19 @@ module.exports = class Repository {
 
   async getOneBy(filters) {
     const records = await this.getAll();
+
     for (let record of records) {
       let found = true;
+
       for (let key in filters) {
         if (record[key] !== filters[key]) {
           found = false;
         }
       }
+
       if (found) {
         return record;
       }
     }
   }
-}
+};
